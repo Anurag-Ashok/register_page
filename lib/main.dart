@@ -54,10 +54,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(1000, 234, 234, 234),
+      backgroundColor: const Color.fromARGB(1000, 234, 234, 234),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(10000, 234, 234, 234),
-        title: Text('Registration Page'),
+        backgroundColor: const Color.fromARGB(10000, 234, 234, 234),
+        title: const Text('Registration Page'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -65,11 +65,11 @@ class _RegistrationPageState extends State<RegistrationPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              const Text(
                 "Please select Profile Image",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -87,16 +87,16 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           _profileImage!,
                           fit: BoxFit.cover,
                         )
-                      : Icon(
+                      : const Icon(
                           Icons.add_photo_alternate,
                           size: 50,
                           color: Colors.grey,
                         ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Name',
                   border: OutlineInputBorder(),
                 ),
@@ -106,9 +106,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   });
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Contact Number',
                   border: OutlineInputBorder(),
                 ),
@@ -118,14 +118,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   });
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               DropdownButtonFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Job',
                   border: OutlineInputBorder(),
                 ),
                 value: _selectedJob,
-                items: [
+                items: const [
                   DropdownMenuItem(
                     child: Text('Electricion'),
                     value: 'Job 1',
@@ -154,12 +154,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   });
                 },
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Please select Document Image",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -184,13 +184,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Save data to Firebase
                   // You need to implement Firebase integration here
                 },
-                child: Text('Save'),
+                child: const Text('Save'),
               ),
             ],
           ),
